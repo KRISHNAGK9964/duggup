@@ -19,7 +19,7 @@
       },
     },
     links: {
-      webSite: "http://localhost:5173",
+      webSite: "https://duggup-w5p7.vercel.app/",
     },
   };
   let isFollowing = following.includes(profile._id);
