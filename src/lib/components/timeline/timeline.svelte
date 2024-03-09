@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SteveJobs from "$lib/assets/SteveJobs.png";
+  import SteveJobs from "$lib/assets/steveJobs.png";
   import SamAltman from "$lib/assets/samAltman.jpeg";
   import ChevronUpIcon from "$lib/assets/ChevronUpIcon.svg";
   import LogoIcon from "$lib/assets/LogoIcon.svg";
