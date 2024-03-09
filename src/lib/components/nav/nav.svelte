@@ -7,6 +7,11 @@
   import HomeIcon from "$lib/assets/HomeIcon.svg";
   import StoryIcon from "$lib/assets/StoryIcon.svg";
   import BookIcon from "$lib/assets/BookIcon.svg";
+  const profile = {
+    _id : "1234",
+    profileImage : ProfileImage,
+    userName: "Krishna Kiran"
+  }
 </script>
 
 <div
@@ -52,13 +57,13 @@
         class="rounded-full h-12 w-12 border-[0.5px] border-[#4D4D4D] overflow-clip"
       >
         <img
-          src={ProfileImage}
+          src={profile.profileImage}
           alt="user profile"
           class="object-cover scale-105"
         />
       </div>
       <div class="hidden md:block line-clamp-1 overflow-ellipsis text-nowrap">
-        Krishna Kiran
+        {profile.userName}
       </div>
       <div class="hidden md:flex w-4 h-4 items-center justify-center">
         <img src={ChevronDown} alt="chevron-down icon" class="object-contain" />
