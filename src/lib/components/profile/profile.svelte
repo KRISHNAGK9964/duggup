@@ -52,7 +52,7 @@
   </div>
   <div class="flex-1 flex flex-col py-4 gap-5">
     <div class="flex justify-between">
-      <p class="w-3/4 font-normal text-[14px] text-base text-[#141618]">
+      <p class="w-3/4 font-normal line-clamp-4 overflow-ellipsis text-[14px] text-base text-[#141618]">
         {profile.profileHeader}
       </p>
       <div class="  flex flex-col gap-2 items-end">

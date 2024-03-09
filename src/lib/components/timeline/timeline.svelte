@@ -65,11 +65,11 @@
 </script>
 
 <div
-  class="max-w-screen-lg mx-auto md:-translate-x-12 lg:-translate-x-24 overflow-hidden flex flex-col gap-1 items-center"
+  class="max-w-screen-lg md:mx-auto md:-translate-x-12 lg:mx-auto  lg:-translate-x-24 flex flex-col gap-1 items-center"
 >
   {#each timeLine as timeLineElement, index}
     <div class=" w-full grid grid-cols-5">
-      <div class="px-2 flex gap-5">
+      <div class=" flex gap-5 col-span-1">
         <p
           class="flex-shrink-0 flex-1 h-min my-auto text-xs leading-4 text-right text-[#7A9299]"
         >
@@ -82,11 +82,11 @@
         </div>
       </div>
       <div
-        class="col-span-4 flex gap-6 max-h-72 items-center justify-center p-6"
+        class="scrollbar-hide col-span-4 flex overflow-auto gap-6 max-h-72 items-center p-6"
       >
         {#each timeLineElement.stories as story}
           <div
-            class="flex-1 bg-white flex-col h-full rounded-xl overflow-hidden border-[0.5px] border-[#D0D5DD]"
+            class="flex-1 min-w-72 bg-white flex-col h-full rounded-xl overflow-hidden border-[0.5px] border-[#D0D5DD]"
           >
             <div class="h-[60%] overflow-hidden flex items-center">
               <img
@@ -103,16 +103,14 @@
           </div>
         {/each}
       </div>
-    </div>
-    <div class="grid grid-cols-5 w-full">
-      <div class="px-0.5 flex gap-5">
-        <div class="flex-1 text-right flex flex-col gap-2 items-end py-4">
+      <div class="translate-x-1.5 flex gap-5 col-span-1">
+        <div class="flex-1 text-right flex flex-col gap-2 justify-center items-end py-4">
           <img
             src={timeLineElement.profession.company.logo}
-            alt="Diggup Logo Icon"
-            class="w-12 h-12 rounded-full overflow-hidden"
+            alt={`${timeLineElement.profession.company.name} logo`}
+            class="w-12 rounded-full overflow-hidden"
           />
-          <div class="">
+          <div class="hidden lg:block">
             <p class="font-bold text-base leading-5 text-[#141618]">
               {timeLineElement.profession.company.name}
             </p>
@@ -150,3 +148,14 @@
     </div>
   {/each}
 </div>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
